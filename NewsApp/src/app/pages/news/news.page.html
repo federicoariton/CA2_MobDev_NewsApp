@@ -1,13 +1,19 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>news</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">news</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-card *ngFor="let article of articles" (click)="openArticle(article)">
+    <img class="article-image" [src]="article.urlToImage" alt="Article Image" *ngIf="article.urlToImage" />
+    <ion-card-header>
+      <ion-card-title>{{ article.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <span class="article-author">Author: {{ article.author }}</span>
+      </ion-item>
+      <ion-item>
+        <span class="article-description">Description: {{ article.description }}</span>
+      </ion-item>
+      <ion-item>
+        <span class="article-date">Published At: {{ article.publishedAt }}</span>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
