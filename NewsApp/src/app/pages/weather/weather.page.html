@@ -1,13 +1,36 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>weather</ion-title>
+    <ion-title>
+      Blank
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">weather</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <ion-item>
+      <p>Dublin Weather</p>
+
+
+    </ion-item>
+    <ion-item>
+    <span>
+   Temperature: {{(weatherValues.temp - 273).toFixed(0)}}
+  </span>
+</ion-item>
+
+<ion-item>
+  <span>
+    humidity: {{(weatherValues.humidity - 273).toFixed(0)}}
+</span>
+</ion-item>
+
+
+<ion-item>
+  <span>
+    pressure: {{(weatherValues.pressure - 273).toFixed(0)}}
+</span>
+</ion-item>
+
+  </ion-card>
 </ion-content>

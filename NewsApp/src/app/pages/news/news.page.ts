@@ -3,8 +3,11 @@ import { HttpClient } from "@angular/common/http";
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 
-const API_URL = environment.API_URL;
-const API_KEY = environment.API_KEY;
+// const API_URL = environment.API_URL;
+// const API_KEY = environment.API_KEY;
+
+const api1Key = environment.api1.API_KEY;
+const api1Url = environment.api1.API_URL;
 
 interface NewsArticle {
   source: {
@@ -33,7 +36,7 @@ export class NewsPage implements OnInit {
   }
 
   loadArticles() {
-    this.httpClient.get<any>(`${API_URL}/top-headlines?country=us&category=science&apiKey=${API_KEY}`).subscribe(
+    this.httpClient.get<any>(`${api1Url}/top-headlines?country=us&category=science&apiKey=${api1Key}`).subscribe(
       (response: any) => {
         console.log(response);
         this.articles = response.articles;

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
-
+import { HttpClientModule } from '@angular/common/http';
 import { WeatherPageRoutingModule } from './weather-routing.module';
 
 import { WeatherPage } from './weather.page';
@@ -13,7 +13,8 @@ import { WeatherPage } from './weather.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    WeatherPageRoutingModule
+    WeatherPageRoutingModule,
+    HttpClientModule,
   ],
   declarations: [WeatherPage]
 })
