@@ -1,17 +1,23 @@
 <ion-content>
+   <!-- Displaying a list of articles using ngFor -->
   <ion-card *ngFor="let article of articles" (click)="openArticle(article)">
+    <!-- Displaying article image if available -->
     <img class="article-image" [src]="article.urlToImage" alt="Article Image" *ngIf="article.urlToImage" />
     <ion-card-header>
+      <!-- Displaying article title -->
       <ion-card-title>{{ article.title }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <ion-item>
+        <!-- Displaying article author -->
         <span class="article-author">Author: {{ article.author }}</span>
       </ion-item>
       <ion-item>
+        <!-- Displaying article description -->
         <span class="article-description">Description: {{ article.description }}</span>
       </ion-item>
       <ion-item>
+        <!-- Displaying article publish date -->
         <span class="article-date">Published At: {{ article.publishedAt }}</span>
       </ion-item>
     </ion-card-content>

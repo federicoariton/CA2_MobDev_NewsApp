@@ -9,7 +9,9 @@ import { Router } from '@angular/router';
 export class CategoryPage {
   constructor(private router: Router) {}
 
+  // Method to open a specific category
   openCategory(category: string) {
+    // Navigate to the category page with the specified category parameter
     this.router.navigate(['/tabs/category', category]);
   }
 }
