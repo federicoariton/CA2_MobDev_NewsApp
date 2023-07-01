@@ -39,3 +39,8 @@ export class WeatherPage implements OnInit {
   }
 
 }
+
+
+// this.httpClient.get<WeatherResponse>(`${api1Url}/weather?q=${"Dublin"}&appid=${api1Key}`).subscribe(results =>{
+//   console.log(results);
+//   this.weatherValues = results.main

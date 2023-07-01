@@ -10,27 +10,15 @@
   <ion-card>
     <ion-item>
       <p>Dublin Weather</p>
-
-
     </ion-item>
     <ion-item>
-    <span>
-   Temperature: {{(weatherValues.temp - 273).toFixed(0)}}
-  </span>
-</ion-item>
-
-<ion-item>
-  <span>
-    humidity: {{(weatherValues.humidity - 273).toFixed(0)}}
-</span>
-</ion-item>
-
-
-<ion-item>
-  <span>
-    pressure: {{(weatherValues.pressure - 273).toFixed(0)}}
-</span>
-</ion-item>
-
+      <span>Temperature: {{ (weatherValues.temp - 273.15).toFixed(0) }}</span>
+    </ion-item>
+    <ion-item>
+      <span>Humidity: {{ weatherValues.humidity.toFixed(0) }}</span>
+    </ion-item>
+    <ion-item>
+      <span>Pressure: {{ weatherValues.pressure.toFixed(0) }}</span>
+    </ion-item>
   </ion-card>
 </ion-content>

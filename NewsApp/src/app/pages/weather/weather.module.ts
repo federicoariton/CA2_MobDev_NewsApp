@@ -16,6 +16,6 @@ import { WeatherPage } from './weather.page';
     WeatherPageRoutingModule,
     HttpClientModule,
   ],
-  declarations: [WeatherPage]
+  declarations: [WeatherPage],
 })
 export class WeatherPageModule {}
