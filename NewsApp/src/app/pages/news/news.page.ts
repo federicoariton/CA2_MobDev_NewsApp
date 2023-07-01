@@ -36,7 +36,7 @@ export class NewsPage implements OnInit {
   }
 
   loadArticles() {
-    this.httpClient.get<any>(`${api1Url}/top-headlines?country=us&category=science&apiKey=${api1Key}`).subscribe(
+    this.httpClient.get<any>(`${api1Url}/top-headlines?country=us&category=general&apiKey=${api1Key}`).subscribe(
       (response: any) => {
         console.log(response);
         this.articles = response.articles;
