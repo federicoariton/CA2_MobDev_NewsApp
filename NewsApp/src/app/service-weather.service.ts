@@ -22,5 +22,5 @@ interface WeatherResponse {
     humidity: number;
     pressure: number;
   };
-  // Other properties from the response if needed
+  
 }
